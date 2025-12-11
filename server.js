@@ -6,11 +6,7 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-var server = app.listen(port, () => {
+app.listen(port, () => {
   console.log(`Application exemple à l'écoute sur le port ${port}!`);
   
-});
-
-var handler = function() {
-  server.close();
-};
+}).close();
